@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manufacturing Dashboard Demo</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; background: #f7f9fb;}
+    nav { margin-bottom: 1.5rem; }
+    nav a { margin-right: 1rem; color: #1467a3; text-decoration: none; font-weight: bold;}
+    h1 { color: #222; }
+    section { background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.06);}
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem;}
+    th, td { border: 1px solid #e0e0e0; padding: 8px;}
+    th { background: #ecf3fa;}
+    form input, form select, form button { margin-right: 1rem; padding: 0.4rem;}
+    .low-stock { color: red; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Manufacturing Inventory & Production Management Dashboard</h1>
+  <nav>
+    <a href="#">Inventory</a>
+    <a href="#">Production</a>
+    <a href="#">Orders</a>
+    <a href="#">Analytics</a>
+  </nav>
+
+  <section>
+    <h2>Test: Add New Product</h2>
+    <form onsubmit="alert('Simulated!'); return false;">
+      <input type="text" placeholder="Product Name" required>
+      <input type="number" placeholder="Initial Stock" min="1" required>
+      <select>
+        <option>Warehouse A</option>
+        <option>Warehouse B</option>
+      </select>
+      <button type="submit">Add Product</button>
+    </form>
+  </section>
+
+  <section style="margin-top:2rem;">
+    <h2>Inventory Overview</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Stock</th>
+          <th>Warehouse</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Widget A</td>
+          <td>12</td>
+          <td>Warehouse A</td>
+          <td>OK</td>
+        </tr>
+        <tr>
+          <td>Gadget B</td>
+          <td><span class="low-stock">2</span></td>
+          <td>Warehouse B</td>
+          <td class="low-stock">Low Stock</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</body>
+</html>
